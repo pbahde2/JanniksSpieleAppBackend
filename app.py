@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/hello')
 def hello():
     return "Hello from Flask!"
 
@@ -17,5 +17,6 @@ def login():
     else:
         return jsonify({"status": "fail", "message": "Falsche Daten"}), 401
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # wichtig für Render
+    app.run(host="0.0.0.0", port=port)
