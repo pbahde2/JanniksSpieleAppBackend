@@ -1,1 +1,4 @@
-flask
+Flask==2.2.5
+flask-jwt-extended==4.6.0
+passlib==1.7.4
+bcrypt==4.1.2
