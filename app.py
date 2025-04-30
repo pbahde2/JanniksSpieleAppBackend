@@ -5,9 +5,11 @@ from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from passlib.hash import bcrypt
 from datetime import timedelta
-
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # This will enable CORS for all routes and all origins
+
 app.config["JWT_SECRET_KEY"] = "supersecret"  # ÄNDERN in Produktion!
 app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(days=1)  # 1 Tag
 
