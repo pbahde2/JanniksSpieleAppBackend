@@ -1,7 +1,7 @@
 {
     "admin": {
         "password": "$2b$12$pZeJsP65/VDlBxfX8r/tN.uXxAd4RLiU99KaJcK9gt0roy/FNAsLq",
-        "expires": "2025-12-31",
+        "expires": "2030-12-31",
         "role": "admin"
     },
     "neueruser": {
